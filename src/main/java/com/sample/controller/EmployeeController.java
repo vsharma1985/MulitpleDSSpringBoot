@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.sample.domain.emp.Employee;
 import com.sample.repo.prime.PrimaryRepo;
@@ -15,8 +15,8 @@ import com.sample.repo.prime.PrimaryRepo;
 
 
 
-@Controller
-@RequestMapping(value="/")
+@RestController
+@RequestMapping(value="/emp")
 @EnableAutoConfiguration
 public class EmployeeController {
 
@@ -24,7 +24,7 @@ public class EmployeeController {
 	private PrimaryRepo primaryRepo;
 	
 	
-	/* @RequestMapping(value = "/getEmployees", method = RequestMethod.GET)
+	 @RequestMapping(value = "/getEmployees", method = RequestMethod.GET)
 	  public String getEmployees() {
 		  List<Employee> empList = null;
 		 String userId = "";	
@@ -39,5 +39,5 @@ public class EmployeeController {
 		    }
 		    return empList.toString();
 		  
-	}*/
+	}
 }
